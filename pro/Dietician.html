@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cardiologist Appointment Booking</title>
+        <link rel="stylesheet" href="stylish.css">
+</head>
+<body>
+        <div class="navbar">
+               <h1>❤ Dietician Appointment Booking</h1>
+        </div>
+        
+        <div class="container">
+               <!-- Doctor 1 Card -->
+               <div class="card">
+                      <div class="card-image">
+                             <img src="images/doctor 5.jpg" alt="Dr. John Doe">
+                      </div>
+                      <div class="card-content">
+                             <h2>Dr. John Doe</h2>
+                             <p class="specialty">Expert in Interventional Cardiology</p>
+                             <p class="experience">15+ Years Experience</p>
+                             
+                             <div class="availability">
+                                    <h4>Available Times:</h4>
+                                    <div class="time-slots">
+                                           <span class="slot" data-time="9:00 AM">9:00 AM</span>
+                                           <span class="slot" data-time="10:30 AM">10:30 AM</span>
+                                           <span class="slot" data-time="2:00 PM">2:00 PM</span>
+                                           <span class="slot" data-time="4:30 PM">4:30 PM</span>
+                                    </div>
+                             </div>
+                             
+                             <button class="btn-appointment" onclick="bookAppointment('Dr. John Doe')">Book Appointment</button>
+                      </div>
+               </div>
+
+               <!-- Doctor 2 Card -->
+               <div class="card">
+                      <div class="card-image">
+                             <img src="images/doctor b.jpg" alt="Dr. Jane Smith">
+                      </div>
+                      <div class="card-content">
+                             <h2>Dr. Jane Smith</h2>
+                             <p class="specialty">Pediatric Cardiology Specialist</p>
+                             <p class="experience">12+ Years Experience</p>
+                             
+                             <div class="availability">
+                                    <h4>Available Times:</h4>
+                                    <div class="time-slots">
+                                           <span class="slot" data-time="9:00 AM">9:00 AM</span>
+                                           <span class="slot" data-time="11:00 AM">11:00 AM</span>
+                                           <span class="slot" data-time="3:00 PM">3:00 PM</span>
+                                           <span class="slot" data-time="5:00 PM">5:00 PM</span>
+                                    </div>
+                             </div>
+                             
+                             <button class="btn-appointment" onclick="bookAppointment('Dr. Jane Smith')">Book Appointment</button>
+                      </div>
+               </div>
+
+               <!-- Doctor 3 Card -->
+               <div class="card">
+                      <div class="card-image">
+                             <img src="images/doctor c.jpg" alt="Dr. Emily Johnson">
+                      </div>
+                      <div class="card-content">
+                             <h2>Dr. Emily Johnson</h2>
+                             <p class="specialty">Preventive Cardiology Expert</p>
+                             <p class="experience">18+ Years Experience</p>
+                             
+                             <div class="availability">
+                                    <h4>Available Times:</h4>
+                                    <div class="time-slots">
+                                           <span class="slot" data-time="8:00 AM">8:00 AM</span>
+                                           <span class="slot" data-time="10:00 AM">10:00 AM</span>
+                                           <span class="slot" data-time="1:00 PM">1:00 PM</span>
+                                           <span class="slot" data-time="3:30 PM">3:30 PM</span>
+                                    </div>
+                             </div>
+                             
+                             <button class="btn-appointment" onclick="bookAppointment('Dr. Emily Johnson')">Book Appointment</button>
+                      </div>
+               </div>
+        </div>
+
+        <!-- Appointment Modal -->
+        <div id="appointmentModal" class="modal">
+               <div class="modal-content">
+                      <span class="close" onclick="closeModal()">&times;</span>
+                      <h2>Book Appointment</h2>
+                      <p id="selectedDoctor"></p>
+                      
+                      <form>
+                             <label for="patientName">Patient Name:</label>
+                             <input type="text" id="patientName" required>
+                             
+                             <label for="patientPhone">Phone Number:</label>
+                             <input type="tel" id="patientPhone" required>
+                             
+                             <label for="patientEmail">Email:</label>
+                             <input type="email" id="patientEmail" required>
+                             
+                             <label for="appointmentDate">Preferred Date:</label>
+                             <input type="date" id="appointmentDate" required>
+                             
+                             <label for="appointmentTime">Time Slot:</label>
+                             <select id="appointmentTime" required>
+                                    <option value="">Select a time</option>
+                             </select>
+                             
+                             <label for="symptoms">Symptoms/Concerns:</label>
+                             <textarea id="symptoms" placeholder="Describe your symptoms or concerns"></textarea>
+                             
+                             <button type="button" class="btn-confirm" onclick="confirmAppointment()">Confirm Appointment</button>
+                      </form>
+               </div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>

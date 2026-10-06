@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediBook</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="nav-logo border">
+      <div class="logo">
+      </div>
+    </div>
+
+    <div class="add-icon">
+      <i class="fa-solid fa-location-dot"></i>
+      <p class="add-second">India</p>
+    </div>
+
+    <div class="nav-search">
+      <select class="search">
+        <option>All</option>
+        <option>Cardiologist</option>
+        <option>Neurologist</option>
+        <option>Pediatrics</option>
+        <option>Orthopedic</option>
+      </select>
+      <input placeholder="Search Best Doctors" class="search-input">
+      <div class="search-icon">
+        <i class="fa-solid fa-magnifying-glass"> </i>
+      </div>
+    </div>
+
+    <div id="navSignin" class="nav-signin border" role="button" tabindex="0" aria-haspopup="dialog">
+      <p class="signin-line" style="color:rgb(105, 102, 135);"><span class="greeting">Hello,</span> <span class="greet-action">Sign in</span></p>
+    </div>
+
+    <div class="nav-wishlist border">
+      <i class="fa-solid fa-heart"></i>
+      Appointments
+    </div>
+    <a class="nav-wishlist border" href="report.html" style="text-decoration: none; color: rgb(105, 102, 135);">
+      <i class="fa-solid fa-file-medical"></i>
+      Report
+    </a>
+   
+    <div class="nav-wishlist border" ">
+      <i class="fa-slab fa-regular fa-circle-question"></i>
+      Help
+    </div>
+  </div>
+
+  <div class="card" id="card">
+    <div>
+        <nav class="tabs" aria-label="Specialty tabs">
+          <a class="tab" href="cardiologist.html">Cardiologist</a>
+          <a class="tab" href="neurologist.html">Neurologist</a>
+          <a class="tab" href="pediatrics.html">Pediatrics</a>
+          <a class="tab" href="orthopedic.html">Orthopedic</a>
+          <a class="tab" href="dermatologist.html">Dermatologist</a>
+          <a class="tab" href="Dentist.html">Dentist</a>
+          <a class="tab" href="Dietician.html">Dietician</a>
+        </nav>
+    </div>
+
+
+  </div>
+
+
+  
+
+
+  <div class="hero">
+    <img src="images/doctor 5.jpg" alt="Doctor" class="hero-image">
+    <div class="hero-overlay">
+      <h2>Welcome to Rainbow Hospital</h2>
+      <p>Expert care, close to you</p>
+    </div>
+
+  </div>
+
+
+  <section class="doctor-section">
+    <div class="container">
+      <h2 style="text-align:center;margin:18px 0;">Available Doctors</h2>
+      <div class="doctor-grid"></div>
+    </div>
+  </section>
+  
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>© 2025 Rainbow Hospital. All rights reserved.</p>
+
+    </div>
+  </footer>
+  <!-- Sign-in modal -->
+  <div id="signinModal" class="signin-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="signin-box">
+      <button class="signin-close" aria-label="Close">×</button>
+      <h3>Sign in</h3>
+      <p class="small-note">Enter your name and email to sign in (demo).</p>
+      <form id="signinForm">
+        <label>Name</label>
+        <input id="siName" type="text" placeholder="Your name" required>
+        <label>Email</label>
+        <input id="siEmail" type="email" placeholder="you@example.com" required>
+        <div style="display:flex;gap:8px;margin-top:12px;">
+          <button type="submit" class="btn primary">Sign in</button>
+          <button type="button" id="siCancel" class="btn ghost">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="cards.js"></script>
+  <script src="auth.js"></script>
+</body>
+
+</html>

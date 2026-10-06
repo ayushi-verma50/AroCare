@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Doctor Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header style="padding:12px;text-align:left;">
+    <a href="index.html" style="text-decoration:none;color:#333;">← Back to Doctors</a>
+  </header>
+  <main class="doctor-page">
+    <div class="doctor-detail" id="doctorDetail">
+      <div class="photo-wrap large">
+        <img id="docPhoto" class="doctor-large-photo" src="" alt="Doctor photo">
+      </div>
+      <div class="doctor-meta">
+        <h1 id="docName">Doctor Name</h1>
+        <p id="docSpecialty" class="muted"></p>
+        <p id="docPhone"></p>
+        <p id="docExperience"></p>
+        <p id="docAvailability"></p>
+        <div style="margin-top:12px;"><button id="bookBtn" class="modal-book">Book Appointment</button></div>
+      </div>
+    </div>
+    <div id="notFound" style="display:none;text-align:center;margin-top:36px;">Doctor not found.</div>
+  </main>
+
+  <script src="cards.js"></script>
+  <script src="doctor.js"></script>
+</body>
+</html>

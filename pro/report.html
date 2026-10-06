@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab Report</title>
+        <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <main class="report-container">
+        <div class="report-header">
+            <h2>Doctor's Lab Report</h2>
+            <div class="small-note">Create a report and mark completed lab tests</div>
+        </div>
+
+        <form id="reportForm">
+            <div class="report-row">
+                <div class="report-col">
+                    <label>Doctor name</label>
+                    <input id="doctorName" placeholder="Dr. Name" type="text">
+                </div>
+                <div class="report-col">
+                    <label>Patient name</label>
+                    <input id="patientName" placeholder="Patient Name" type="text">
+                </div>
+                <div class="report-col small">
+                    <label>Date</label>
+                    <input id="reportDate" type="date">
+                </div>
+            </div>
+
+            <div style="margin-top:12px;">
+                <label>Notes / Instructions</label>
+                <textarea id="notes" rows="3" placeholder="Optional notes from doctor"></textarea>
+            </div>
+
+            <div style="margin-top:16px;display:flex;align-items:center;gap:12px;">
+                <h3 style="margin:0">Lab Tests</h3>
+                <div class="small-note">(check tests that are done)</div>
+            </div>
+
+            <div class="test-controls">
+                <input id="newTestInput" placeholder="Add a custom test (e.g., D-Dimer)">
+                <button id="addTestBtn" class="btn ghost" type="button">Add</button>
+            </div>
+
+            <div id="testsList" class="tests-list" aria-live="polite"></div>
+
+            <div class="actions">
+                <button id="markAll" class="btn ghost" type="button">Mark All Done</button>
+                <button id="clearAll" class="btn ghost" type="button">Clear All</button>
+                <button id="generate" class="btn primary" type="button">Generate Report</button>
+                <button id="save" class="btn" type="button">Save</button>
+            </div>
+        </form>
+
+        <div id="reportOutput" class="report-output" style="display:none"></div>
+    </main>
+
+    <script src="report.js"></script>
+</body>
+</html>
